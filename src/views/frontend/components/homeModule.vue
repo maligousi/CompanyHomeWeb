@@ -388,7 +388,7 @@
     width: 75%;border-radius: 4px;
   }
   .gifs_img {
-    display: block;width: 80%;margin: 0 auto;
+    display: block;width: 76%;margin: 0 auto;height: 150px;
   }
   .gifs_imgh5 {
     display: block;width: 50%;margin: 1rem auto;

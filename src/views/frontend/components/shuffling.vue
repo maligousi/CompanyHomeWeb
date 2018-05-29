@@ -6,7 +6,7 @@
       <p @click="slideNext" class="rightLun"></p>
     </div>
     <div class="hidden-sm-and-up" style="width:100%;height: 150px;position: relative;">
-      <slider ref="slider" :pages="pages" :sliderinit="sliderinit"></slider>
+      <slider ref="sliderTwo" :pages="pagesTwo" :sliderinit="sliderinitTwo"></slider>
     </div>
   </div>
 </template>
@@ -30,25 +30,53 @@
           loop: true,
           autoplay:3000
         },
+        sliderinitTwo: {
+          currentPage: 0,
+          tracking: false,
+          thresholdDistance: 100,
+          thresholdTime: 300,
+          loop: true,
+          autoplay:3000
+        },
         pages:[
-//          {
-//            html: '<div class="slider1"></div>',
-//            style: {
-//              'background': '#1bbc9b'
-//            }
-//          },
-//          {
-//            html: '<div class="slider2">slider2</div>',
-//            style: {
-//              'background': '#4bbfc3'
-//            }
-//          },
-//          {
-//            html: '<div class="slider3">slider3</div>',
-//            style: {
-//              'background': '#7baabe'
-//            }
-//          }
+          {
+            html: '<div class="slider1"></div>',
+            style: {
+              'background': '#1bbc9b'
+            }
+          },
+          {
+            html: '<div class="slider2">slider2</div>',
+            style: {
+              'background': '#4bbfc3'
+            }
+          },
+          {
+            html: '<div class="slider3">slider3</div>',
+            style: {
+              'background': '#7baabe'
+            }
+          }
+        ],
+        pagesTwo:[
+          {
+            html: '<div class="slider1"></div>',
+            style: {
+              'background': '#1bbc9b'
+            }
+          },
+          {
+            html: '<div class="slider2">slider2</div>',
+            style: {
+              'background': '#4bbfc3'
+            }
+          },
+          {
+            html: '<div class="slider3">slider3</div>',
+            style: {
+              'background': '#7baabe'
+            }
+          }
         ]
       }
     },
@@ -105,14 +133,14 @@
 
   .leftLun {
     position: absolute;left: 10px;top: 50%;width: 30px;height: 30px;
-    border-bottom: 2px solid white;border-right:2px solid white;z-index: 2;
+    border-bottom: 2px solid white;border-right:2px solid white;z-index: 5;
     transform: rotate(135deg) translate(-50%);
-    transform-origin:50% 50%;
+    transform-origin:50% 50%;cursor: pointer;
   }
   .rightLun {
     position: absolute;right: 10px;top: 50%;width: 30px;height: 30px;
-    border-bottom: 2px solid white;border-left:2px solid white;z-index: 2;
+    border-bottom: 2px solid white;border-left:2px solid white;z-index: 5;
     transform: rotate(-135deg) translate(50%);
-    transform-origin:50% 50%;
+    transform-origin:50% 50%;cursor: pointer;
   }
 </style>

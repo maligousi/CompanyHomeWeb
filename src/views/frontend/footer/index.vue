@@ -3,11 +3,11 @@
   <div class="footer_div-top wd">
     <div class="foot-logo hidden-xs-only"><img :src="pic.one"/></div>
     <div class="footer-go" v-show="!ModenType">
-      <a>
-        <img :src="pic.two"/>
-        <p>专柜查询</p>
-        <span>寻找您身边的尸体专柜</span>
-      </a>
+      <!--<a>-->
+        <!--<img :src="pic.two"/>-->
+        <!--<p>专柜查询</p>-->
+        <!--<span>寻找您身边的尸体专柜</span>-->
+      <!--</a>-->
       <a @click="showPic(3)">
         <img :src="pic.three"/>
         <p>官方公众号</p>
@@ -31,11 +31,11 @@
     </div>
     <div class="footer-goh5" v-show="ModenType">
       <div>
-        <a>
-          <img :src="pic.two"/>
-          <p>专柜查询</p>
-          <span>寻找您身边的尸体专柜</span>
-        </a>
+        <!--<a>-->
+          <!--<img :src="pic.two"/>-->
+          <!--<p>专柜查询</p>-->
+          <!--<span>寻找您身边的尸体专柜</span>-->
+        <!--</a>-->
         <a @click="showPic(3)">
           <img :src="pic.three"/>
           <p>官方公众号</p>
@@ -74,7 +74,8 @@
   </div>
   <div class="toast" v-show="gzh" @click.self="tomiss">
     <div class="animated toast-cont" :class="{fadeInDownBig:donghua==1,fadeOutUpBig:donghua==2}">
-      <img src="../../../assets/tup/gzh.jpeg"/>
+      <img v-if="!ModenType" src="../../../assets/tup/gzh.jpeg"/>
+      <img v-else src="../../../assets/tup/gzhh5.jpeg"/>
     </div>
   </div>
 </div>
@@ -134,7 +135,7 @@
   .footer_div.xiao {
     padding: .2rem 0 1rem;
   }
-  .wd {width: 90%;margin: 0 auto;}
+  .wd {width: 84%;margin: 0 auto;}
   .footer_div-top {
     padding: 6px 0;
     display: flex;justify-content: flex-start;align-items: center;flex-flow: row nowrap;

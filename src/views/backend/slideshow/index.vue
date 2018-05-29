@@ -2,8 +2,9 @@
   <div class="app-container">
     <div class="slideshow">
       <!-- add button -->
-      <div class="slideshow-add-button">
-        <el-button @click="dialogFormVisible = true" type="success">添加轮播图</el-button>
+      <div class="slideshow-add-button gonggao">
+        <!--<el-button @click.native="dialogFormVisible = true" type="success">添加轮播图</el-button>-->
+        <el-button @click.native="showDialogFormVisible" type="success">添加轮播图</el-button>
       </div>
       <!-- slideshow list -->
       <h3>轮播图列表</h3>
@@ -301,7 +302,15 @@ export default {
           message: `${this.errorMsg}!`
         })
       }
+    },
+    showDialogFormVisible(){
+      this.dialogFormVisible=true;
     }
   }
 }
 </script>
+<style scoped>
+  .gonggao {
+    z-index: 100;
+  }
+</style>

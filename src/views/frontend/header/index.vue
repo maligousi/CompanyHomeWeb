@@ -285,6 +285,21 @@
     width: 88%;margin: 0 auto;
     display: flex;justify-content: center;flex-flow:row nowrap;align-items: center;
   }
+  @media (min-width: 992px){
+    .z_con {
+      width: 90%;
+    }
+  }
+  @media (min-width: 1200px){
+    .z_con {
+      width: 88%;
+    }
+  }
+  @media (min-width: 1300px){
+    .z_con {
+      width: 80%;
+    }
+  }
   .z_con>li {width: 15%;cursor: pointer;position: relative;}
   .show_me {
     display:none;background-color: white;

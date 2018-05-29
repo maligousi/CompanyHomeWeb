@@ -20,7 +20,14 @@
     created(){
       this.getImages();
     },
+    watch:{
+      '$route':'imageChange'
+    },
     methods:{
+      imageChange(){
+        this.id=JSON.parse(localStorage.getItem('menuNum')).textid
+        this.getImages();
+      },
       getImages:function () {
         var that=this;
         frontendGet.get('/api/htmlType/get',{

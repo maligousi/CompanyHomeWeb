@@ -345,7 +345,7 @@
     font-size: .6rem;text-align: center;margin-top: 1.2rem;
     background-color: #EC7291;border-color: #ccc;
     color: #fff;padding: .5rem 0;
-    width: 75%;border-radius: 4px;
+    width: 5rem;border-radius: 4px;
   }
   .chanpin_sidd_right>div {
     position: relative;
@@ -372,7 +372,7 @@
     position: absolute;width: 50%;left: 25%;top: -24px;
   }
   .gifsh5 {
-    padding-bottom: .65rem;
+    padding-bottom: .5rem;
   }
   .gifsh5>img {
     position: absolute;width: 50%;left: 25%;top: -1rem;
@@ -381,17 +381,17 @@
     margin-top: 20px;  font-size: 13px;
   }
   .gifsh5 a {
-    margin: 1.5rem auto 0;
-    font-size: .6rem;text-align: center;margin-top: 1.2rem;
+    margin: 1rem auto 0;
+    font-size: .6rem;text-align: center;
     background-color: #EC7291;border-color: #ccc;
     color: #fff;padding: .5rem 0;
-    width: 75%;border-radius: 4px;
+    width: 5rem;border-radius: 4px;
   }
   .gifs_img {
     display: block;width: 76%;margin: 0 auto;height: 150px;
   }
   .gifs_imgh5 {
-    display: block;width: 50%;margin: 1rem auto;
+    display: block;width: 50%;margin: 1rem auto .6rem;
   }
   .mid_lunbo {
     width: 48%;position: relative;height: 100%;

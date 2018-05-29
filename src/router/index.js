@@ -34,7 +34,7 @@ export const constantRouterMap = [
         component: () => import('@/views/frontend/about/concept')
       },
       {
-        path: 'text',
+        path: 'text/:name',
         name: 'text',
         component: () => import('@/views/frontend/about/text')
       },
@@ -49,7 +49,7 @@ export const constantRouterMap = [
         component: () => import('@/views/frontend/about/mark')
       },
       {
-        path: 'images',
+        path: 'images/:name',
         name: 'images',
         component: () => import('@/views/frontend/about/images')
       },

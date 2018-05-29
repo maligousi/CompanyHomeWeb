@@ -61,15 +61,19 @@
       </div>
     </div>
   </div>
-  <div class="footer_div-bottom wd">
+  <div class="footer_div-bottom wd2">
     <p>地址：浙江省杭州市西湖区转塘街道云梦路2号澹海金座3号楼北</p>
     <p>总机：0571-87310210</p>
     <p>周一至周日 8:30-12:00 13:30-18:00 （节假日除外）</p>
     <p class="beif">
-      <img class="gongan1" :src="pic.serven"/>
-      <span>浙公网安备 33010602008931号</span>
-      <img class="gongan2" :src="pic.eight"/>
-      <span>浙ICP备17055660号</span>
+      <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33010602008931">
+        <img class="gongan1" :src="pic.serven"/>
+        <span>浙公网安备 33010602008931号</span>
+      </a>
+      <a target="_blank" href="http://www.miibeian.gov.cn/">
+        <img class="gongan2" :src="pic.eight"/>
+        <span>浙ICP备17055660号</span>
+      </a>
     </p>
   </div>
   <div class="toast" v-show="gzh" @click.self="tomiss">
@@ -135,7 +139,8 @@
   .footer_div.xiao {
     padding: .2rem 0 1rem;
   }
-  .wd {width: 84%;margin: 0 auto;}
+  .wd {width: 70%;margin: 0 auto;}
+  .wd2 {width: 90%;margin: 0 auto;}
   .footer_div-top {
     padding: 6px 0;
     display: flex;justify-content: flex-start;align-items: center;flex-flow: row nowrap;
@@ -173,9 +178,12 @@
   .footer_div-bottom p {
     text-align: center;
     font-size: .6rem;margin: 5px 0;
-    color:#adadad;font-weight: 900;
+    color:#adadad;
   }
   .beif {
+    display: flex;justify-content: center;align-items: center;flex-flow: row wrap;
+  }
+  .beif>a {
     display: flex;justify-content: center;align-items: center;flex-flow: row wrap;
   }
   .beif span {color:#939393;}

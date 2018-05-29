@@ -112,6 +112,7 @@
             })
           }
           that.pages=cunz;
+          that.pagesTwo=cunz;
         }).catch(function (data) {
           console.log(data);
         })

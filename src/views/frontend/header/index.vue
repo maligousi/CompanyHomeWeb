@@ -201,12 +201,12 @@
 //        console.log(x,y,z);
         switch(x){
           case 1 :
-            this.$router.push({name:'images',params:{whichOne:x,thisOne:w}});
             localStorage.setItem('menuNum',JSON.stringify({imageid:w}));
+            this.$router.push({path:`/images/${z}`});
             break;
           case 2 :
-            this.$router.push({name:'text',params:{whichOne:x,thisOne:w}});
             localStorage.setItem('menuNum',JSON.stringify({textid:w}));
+            this.$router.push({path:`/text/${z}`});
             break;
           case 3 :
             this.$router.push({name:'news',params:{whichOne:y,thisOne:z}});

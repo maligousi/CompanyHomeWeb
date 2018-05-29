@@ -3,7 +3,8 @@
     <!--{{type}}-->
     <!--{{id}}-->
     <p>{{texts.menuName}}</p>
-    <div class="web_text-cont" v-html="texts.htmlContent"></div>
+    <div class="web_text-cont1 hidden-xs-only" v-html="texts.htmlContent"></div>
+    <div class="web_text-cont2 hidden-sm-and-up" v-html="texts.htmlContent"></div>
 
   </div>
 </template>
@@ -21,7 +22,14 @@
     created(){
       this.getTexts();
     },
+    watch:{
+      '$route':'textChange'
+    },
     methods:{
+      textChange(){
+        this.id=JSON.parse(localStorage.getItem('menuNum')).textid
+        this.getTexts();
+      },
       getTexts:function () {
         var that=this;
         frontendGet.get('/api/htmlType/get',{
@@ -46,7 +54,11 @@
   .web_text p {
     text-align: center;font-weight: bolder;font-size: 20px;
   }
-  .web_text-cont {
+  .web_text-cont1 {
+    width: 70%;margin: 0 auto;
+    padding-top: 15px;line-height: 1.4;
+  }
+  .web_text-cont2 {
     padding-top: 15px;line-height: 1.4;
     text-align: center;
   }

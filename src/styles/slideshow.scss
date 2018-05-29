@@ -1,0 +1,35 @@
+// 后台 轮播图模块scss
+
+.slideshow {
+  .slideshow-add-button {
+    text-align: right;
+  }
+
+  .slideshow-list {
+    border-top: 1px solid #D5DCE0;
+    padding-top: 20px;
+  }
+
+  .slideshow-none {
+    border-top: 1px solid #D5DCE0;
+    padding-top: 20px;
+  }
+
+  .slideshow-list-item {
+    display: flex;
+    padding: 10px 20px;
+    border-bottom: 1px solid #D5DCE0;
+  }
+
+  .slideshow-list-item-img {
+    width: 320px;
+    height: 240px;
+    border-radius: 5px;
+  }
+
+  .slideshow-list-item-button {
+    height: 240px;
+    line-height: 240px;
+    margin-left: 30px;
+  }
+}

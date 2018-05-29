@@ -1,0 +1,38 @@
+.homePageRecommendGoods {
+  .homePageRecommendGoods-add {
+    text-align: right;
+  }
+
+  .homePageRecommendGoods-main-title {
+    text-align: center;
+  }
+  
+  .homePageRecommendGoods-main-item {
+    padding: 15px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+
+    &:hover {
+      -webkit-box-shadow: 0px 0px 5px 3px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+      -moz-box-shadow:    0px 0px 5px 3px #ccc;  /* Firefox 3.5 - 3.6 */
+      box-shadow:         0px 0px 5px 3px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+    }
+  }
+
+  .homePageRecommendGoods-main-item-content {
+    text-align: center;
+    word-wrap: break-all;
+  }
+
+  .homePageRecommendGoods-main-item-img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .homePageRecommendGoods-main-item-controller {
+    border-top: 1px solid #D5DCE0;
+    padding-top: 15px;
+  }
+}

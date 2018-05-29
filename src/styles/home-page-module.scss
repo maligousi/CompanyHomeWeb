@@ -1,0 +1,29 @@
+.home-module {
+  .home-module-add {
+    text-align: right;
+  }
+
+  .home-module-item {
+    display: flex;
+    border-bottom: 1px solid #D5DCE0;
+  }
+
+  .home-module-item-title {
+    text-align: center;
+  }
+
+  .home-module-item-title-img {
+    width: 300px;
+    height: 100px;
+  }
+
+  .home-module-item-module {
+    margin-right: 20px;
+  }
+
+  .home-module-item-module-content {
+    text-align: center;
+    height: 100px;
+    line-height: 100px;
+  }
+}

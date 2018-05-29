@@ -1,0 +1,89 @@
+@import './variables.scss';
+@import './mixin.scss';
+@import './transition.scss';
+@import './element-ui.scss';
+@import './sidebar.scss';
+@import './slideshow.scss';
+@import './logo-manage.scss';
+@import './home-page-module.scss';
+@import './menuManage.scss';
+@import './homePageRecommendGoods';
+@import './textAndImageManage';
+@import './menuNewsManage';
+@import './developHistory';
+@import './menuGoodsManage';
+@import './frontend';
+@import './frontendMenu';
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+div:focus{
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+//main-container全局样式
+.app-main{
+  min-height: 100%
+}
+
+.app-container {
+  padding: 20px;
+}
+
+.backend-item-title {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #D5DCE0;
+}
+
+// 模态框内 编辑模块 显示已有图片之公共模块
+
+.dialog-common-img-module {
+  display: flex;
+
+  .dialog-common-img-module-img {
+    width: 146px;
+    height: 146px;
+    margin-right: 15px;
+    border-radius: 6px;
+    border: 1px solid #c0ccda;
+  }
+}

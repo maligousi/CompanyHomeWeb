@@ -1,0 +1,35 @@
+.frontend {
+  @media screen and (min-width: 768px) {
+    .frontend-logo {
+      text-align: center;
+      height: 100px;
+  
+      img {
+        width: 300px;
+        height: 100%;
+      }
+    }
+
+    .frontend-logo-h5 {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .frontend-logo {
+      display: none;
+    }
+
+    .frontend-logo-h5 {
+      text-align: center;
+      height: 40px;
+      padding: 10px 0;
+      background-color: black;
+  
+      img {
+        width: 127px;
+        height: 20px;
+      }
+    }
+  }
+}

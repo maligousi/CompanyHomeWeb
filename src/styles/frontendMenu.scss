@@ -1,0 +1,18 @@
+.frontendMenu {
+  background-color: #000;
+  padding: 15px 10px;
+  border-top: 2px solid #FE6A7A;
+
+  .frontendMenu-content {
+    text-align: center;
+    color: #fff;
+    border-right: 1px solid #fff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:last-child {
+      border: 0;
+    }
+  }
+}

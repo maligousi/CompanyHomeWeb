@@ -1,0 +1,46 @@
+const apiConfig = {
+  // base
+  baseUrl: 'http://comanyhome.tunnel.qydev.com',
+  // 后台
+  login: '/login',
+  addSlideshow: '/sys/index/broadcast/add',
+  slideshowList: '/sys/index/broadcast/list',
+  deleteSlideshowItem: '/sys/index/broadcast',
+  editSlideshowItem: '/sys/index/broadcast/update',
+  getOfficalWebsiteLogoBackend: '/sys/topLogo/get',
+  setOfficalWebsiteLogo: '/sys/topLogo/saveOrUpdate',
+  addHomePageModule: '/sys/indexModel/saveOrUpdate',
+  getHomePageModules: '/sys/indexModel/list',
+  deleteHomePageModule: '/sys/indexModel/delete',
+  getAllMenu: '/sys/menu/get',
+  addMenu: '/sys/menu/saveOrUpdate',
+  deleteMenu: '/sys/menu/delete',
+  addHomePageRecommendGoods: '/sys/indexRecommendProd/addOrUpdate',
+  getAllHomePageRecommendGoods: '/sys/indexRecommendProd/list',
+  deleteHomePageRecommendGoods: '/sys/indexRecommendProd/delete',
+  addTextAndImageModule: '/sys/htmlType/saveOrUpdate',
+  getTextAndImageModules: '/sys/htmlType/list',
+  deleteTextAndImageModule: '/sys/htmlType/delete',
+  getMenuType: '/sys/menuType/get',
+  getMenusByMenuType: '/sys/menuType/get/menuType',
+  bindNewsMenu: '/sys/htmlTypeNews/binding/menu',
+  submitNews: '/sys/htmlTypeNews/saveOrUpdate',
+  getAllNews: '/sys/htmlTypeNews/list',
+  deleteNew: '/sys/htmlTypeNews/delete',
+  bindDevelopHistorysMenu: '/sys/htmlHistoryDevelopment/binging/menu',
+  postDevelopHistory: '/sys/htmlHistoryDevelopment/saveOrUpdate',
+  getDevelopHistorys: '/sys/htmlHistoryDevelopment/list',
+  deleteDevelopHistory: '/sys/htmlHistoryDevelopment/delete',
+  bindGoodsMenus: '/sys/htmlProductCategory/bing/menu',
+  deleteGoodsMenu: '/sys/htmlProductCategory/delete',
+  getAllGoodsMenus: '/sys/htmlProductCategory/list',
+  postGoodsMenu: '/sys/htmlProductCategory/saveOrUpdate',
+  getSpecMenuGoods: '/sys/htmlProduct/list',
+  deleteSpecMenuGood: '/sys/htmlProduct/delete',
+  postSpecMenuGood: '/sys/htmlProduct/saveOrUpdate',
+  // 前台
+  frontendGetLogo: '/api/index/topLogo/get',
+  getMenus: '/api/menu/get'
+}
+
+export default apiConfig

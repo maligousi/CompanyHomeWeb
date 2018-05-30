@@ -60,6 +60,5 @@
   }
   .web_text-cont2 {
     padding-top: 15px;line-height: 1.4;
-    text-align: center;
   }
 </style>

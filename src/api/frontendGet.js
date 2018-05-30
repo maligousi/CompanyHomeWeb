@@ -41,11 +41,12 @@ frontendGet.interceptors.response.use(
       case 500:
         console.log(500)
         break
+      default:
+        MessageBox.alert('与服务器断开连接', '提示', {
+          confirmButtonText: '确定',
+          callback: action => {}
+        })
     }
-    MessageBox.alert('与服务器断开连接', '提示', {
-      confirmButtonText: '确定',
-      callback: action => {}
-    })
     return Promise.reject(error)
   }
 )

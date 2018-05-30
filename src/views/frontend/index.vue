@@ -110,4 +110,7 @@ export default {
   .sliderTu img {
     display: block;width: 100%;height: 100%;
   }
+  .web_text-cont2 img {
+    max-width: 100%;
+  }
 </style>

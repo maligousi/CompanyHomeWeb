@@ -65,7 +65,8 @@ export default {
     },
     edit(id) {
       this.$router.push({
-        path: '/menuContentManage/menuGoodsAdd',
+//        path: '/menuContentManage/menuGoodsAdd',
+        path: '/menuContentManage/menuGoodsCategoryAdd',
         query: { id: id }
       })
     },

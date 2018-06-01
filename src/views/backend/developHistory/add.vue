@@ -3,7 +3,7 @@
     <h3 class="backend-item-title">发展史添加</h3>
     <div>
       <div class="developHistory-bind">
-        <p>已绑定菜单：{{specMenus.menuName}}</p>
+        <p>已绑定菜单：{{specMenus?specMenus.menuName:specMenus}}</p>
         <p>绑定发展史菜单：</p>
         <el-form ref="form" label-width="140px">
           <el-form-item label="选择一级菜单">

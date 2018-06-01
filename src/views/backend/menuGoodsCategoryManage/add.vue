@@ -2,7 +2,7 @@
   <div class="menuGoodsManage">
     <h3 class="backend-item-title">商品分类添加</h3>
     <div class="menuGoodsManage-bind">
-      <p>已绑定菜单：{{specMenus.menuName}}</p>
+      <p>已绑定菜单：{{specMenus?specMenus.menuName:specMenus}}</p>
       <p>绑定商品菜单：</p>
       <el-form ref="form" label-width="140px">
         <el-form-item label="选择一级菜单">

@@ -37,6 +37,7 @@ const menuNewsManage = {
     async getAllMenusByMenusType({ commit }, payload) {
       const result = await getMenusByMenuType(payload)
       if (result.data.code === 0) {
+        // console.log(result.data.data)
         commit('SUCCESS_GET_SPEC_MENUS_BY_MENU_TYPE', result.data.data)
       }
     },

@@ -156,6 +156,7 @@ export default {
           } else {
             this.value = '1'
           }
+          this.content=this.form.htmlContent
           return true
         }
       })

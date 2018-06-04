@@ -50,28 +50,34 @@
       :visible.sync="dialogVisible">
       <el-form ref="form" :model="form" label-width="140px">
         <el-form-item label="商品一 PC图片">
-          <el-upload
-            :action="imgUpload"
-            list-type="picture-card"
-            :limit="imgLimit"
-            :on-exceed="onExceed"
-            :on-remove="onRemove('addPc1')"
-            :on-success="onSuccess('addPc1')"
+          <div class="dialog-common-img-module">
+            <img v-if="form.prodOneImgUrl" class="dialog-common-img-module-img" :src="form.prodOneImgUrl" alt="pc">
+            <el-upload
+              :action="imgUpload"
+              list-type="picture-card"
+              :limit="imgLimit"
+              :on-exceed="onExceed"
+              :on-remove="onRemove('addPc1')"
+              :on-success="onSuccess('addPc1')"
             >
-            <i class="el-icon-plus"></i>
-          </el-upload>
+              <i class="el-icon-plus"></i>
+            </el-upload>
+          </div>
         </el-form-item>
         <el-form-item label="商品一 H5图片">
-          <el-upload
-            :action="imgUpload"
-            list-type="picture-card"
-            :limit="imgLimit"
-            :on-exceed="onExceed"
-            :on-remove="onRemove('addH51')"
-            :on-success="onSuccess('addH51')"
+          <div class="dialog-common-img-module">
+            <img v-if="form.h5ProdOneImgUrl" class="dialog-common-img-module-img" :src="form.h5ProdOneImgUrl" alt="pc">
+            <el-upload
+              :action="imgUpload"
+              list-type="picture-card"
+              :limit="imgLimit"
+              :on-exceed="onExceed"
+              :on-remove="onRemove('addH51')"
+              :on-success="onSuccess('addH51')"
             >
-            <i class="el-icon-plus"></i>
-          </el-upload>
+              <i class="el-icon-plus"></i>
+            </el-upload>
+          </div>
         </el-form-item>
         <el-form-item label="商品一 名字">
           <el-input v-model="form.prodOneName"></el-input>
@@ -83,28 +89,34 @@
           <el-input v-model="form.referOneUrl"></el-input>
         </el-form-item>
         <el-form-item label="商品二 PC图片">
-          <el-upload
-            :action="imgUpload"
-            list-type="picture-card"
-            :limit="imgLimit"
-            :on-exceed="onExceed"
-            :on-remove="onRemove('addPc2')"
-            :on-success="onSuccess('addPc2')"
+          <div class="dialog-common-img-module">
+            <img v-if="form.prodTwoImgUrl" class="dialog-common-img-module-img" :src="form.prodTwoImgUrl" alt="pc">
+            <el-upload
+              :action="imgUpload"
+              list-type="picture-card"
+              :limit="imgLimit"
+              :on-exceed="onExceed"
+              :on-remove="onRemove('addPc2')"
+              :on-success="onSuccess('addPc2')"
             >
-            <i class="el-icon-plus"></i>
-          </el-upload>
+              <i class="el-icon-plus"></i>
+            </el-upload>
+          </div>
         </el-form-item>
         <el-form-item label="商品二 H5图片">
-          <el-upload
-            :action="imgUpload"
-            list-type="picture-card"
-            :limit="imgLimit"
-            :on-exceed="onExceed"
-            :on-remove="onRemove('addH52')"
-            :on-success="onSuccess('addH52')"
+          <div class="dialog-common-img-module">
+            <img v-if="form.h5ProdTwoImgUrl" class="dialog-common-img-module-img" :src="form.h5ProdTwoImgUrl" alt="pc">
+            <el-upload
+              :action="imgUpload"
+              list-type="picture-card"
+              :limit="imgLimit"
+              :on-exceed="onExceed"
+              :on-remove="onRemove('addH52')"
+              :on-success="onSuccess('addH52')"
             >
-            <i class="el-icon-plus"></i>
-          </el-upload>
+              <i class="el-icon-plus"></i>
+            </el-upload>
+          </div>
         </el-form-item>
         <el-form-item label="商品二 名字">
           <el-input v-model="form.prodTwoName"></el-input>

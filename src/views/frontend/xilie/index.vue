@@ -72,7 +72,7 @@
         xilies:[],
         showImage:'',
         prods:[],
-        xid:localStorage.getItem('menuNum')?JSON.parse(localStorage.getItem('menuNum')).xilieid:'',
+        xid:this.$route.params.name,
         value:''
       }
     },
@@ -90,7 +90,7 @@
     },
     methods:{
       daoChange(){
-        this.changeIds(JSON.parse(localStorage.getItem('menuNum')).xilieid);
+        this.changeIds(this.$route.params.name);
       },
       changeIm:function (x) {
         for(let i=0;i<this.xilies.length;i++){
@@ -132,7 +132,6 @@
         this.xid=x;
         this.value=x;
         this.changeIm(x);
-        localStorage.setItem('menuNum',JSON.stringify({xilieid:x}));
       },
       seleChange:function () {
         this.changeIds(this.value)

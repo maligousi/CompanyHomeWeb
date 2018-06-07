@@ -201,12 +201,12 @@
 //        console.log(x,y,z);
         switch(x){
           case 1 :
-            localStorage.setItem('menuNum',JSON.stringify({imageid:w}));
-            this.$router.push({path:`/images/${z}`});
+//            localStorage.setItem('menuNum',JSON.stringify({imageid:w}));
+            this.$router.push({path:`/images/${w}`});
             break;
           case 2 :
-            localStorage.setItem('menuNum',JSON.stringify({textid:w}));
-            this.$router.push({path:`/text/${z}`});
+//            localStorage.setItem('menuNum',JSON.stringify({textid:w}));
+            this.$router.push({path:`/text/${w}`});
             break;
           case 3 :
             this.$router.push({name:'news',params:{whichOne:y,thisOne:z}});
@@ -215,8 +215,8 @@
             this.$router.push({name:'history',params:{whichOne:y,thisOne:z}});
             break;
           case 5 :
-            localStorage.setItem('menuNum',JSON.stringify({xilieid:w}));
-            this.$router.push({path:`/xilie/${z}`});
+//            localStorage.setItem('menuNum',JSON.stringify({xilieid:w}));
+            this.$router.push({path:`/xilie/${w}`});
             break;
           default:
             this.$router.push({path:'/'});

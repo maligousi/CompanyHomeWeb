@@ -16,7 +16,6 @@
       return {
         texts:'',
         type:2,
-        id:localStorage.getItem('menuNum')?JSON.parse(localStorage.getItem('menuNum')).textid:''
       }
     },
     created(){
@@ -35,7 +34,7 @@
         frontendGet.get('/api/htmlType/get',{
           params:{
             htmlType:that.type,
-            menuId:that.id
+            menuId:that.$route.params.name
           }
         }).then(function (response) {
           console.log('texts:',response.data);

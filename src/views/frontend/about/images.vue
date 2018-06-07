@@ -14,7 +14,6 @@
       return {
         images:'',
         type:1,
-        id:localStorage.getItem('menuNum')?JSON.parse(localStorage.getItem('menuNum')).imageid:''
       }
     },
     created(){
@@ -33,7 +32,7 @@
         frontendGet.get('/api/htmlType/get',{
           params:{
             htmlType:that.type,
-            menuId:that.id
+            menuId:that.$route.params.name
           }
         }).then(function (response) {
           console.log('images:',response.data);

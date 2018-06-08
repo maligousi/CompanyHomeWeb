@@ -6,7 +6,7 @@
       <!--<a href="javascript:;">匀净萃白系列></a>-->
     <!--</div>-->
     <div class="xilie-img rongqi" :class="{ch:Moden}">
-      <img :src="showImage" />
+      <img :src="Moden?showImage[1]:showImage[0]" />
       <!--<img src="../../../assets/tup/xielie_img2.jpg" />-->
     </div>
     <div class="yidongSele" v-show="Moden">
@@ -37,9 +37,10 @@
           <div class="xilie_mokuai-topimg">
             <img :src="item.prodPic" />
           </div>
-          <div class="xilie_mokuai-info">
+          <div class="xilie_mokuai-info" :class=" Moden?'xilie_mokuai-infoh5':'' ">
             <div>
               <p>{{item.prodName}}</p>
+              <br>
               <p>{{item.prodDesc}}</p>
             </div>
             <p>{{item.prodPrice}}<span>元</span></p>
@@ -70,7 +71,7 @@
     data(){
       return {
         xilies:[],
-        showImage:'',
+        showImage:['',''],
         prods:[],
         xid:this.$route.params.name,
         value:''
@@ -95,7 +96,9 @@
       changeIm:function (x) {
         for(let i=0;i<this.xilies.length;i++){
           if(this.xilies[i].id==x){
-            return this.showImage=this.xilies[i].categoryPic;
+            this.showImage[0]=this.xilies[i].categoryPic;
+            this.showImage[1]=this.xilies[i].categoryH5Pic;
+            return
           }
         }
       },
@@ -108,10 +111,10 @@
           that.xilies=response.data.data;
           for(let i=0;i<z.length;i++){
             if(z[i].id==that.xid){
-              that.showImage=z[i].categoryPic
+              that.showImage[0]=that.xilies[i].categoryPic;
+              that.showImage[1]=that.xilies[i].categoryH5Pic;
             }
           }
-          console.log(that.showImage);
         }).catch(function (data) {
           console.log(data);
         })
@@ -175,14 +178,16 @@
     display: flex;flex-flow: row wrap;justify-content: flex-start;align-items: flex-start;
   }
   .xilie_mokuai {
-    width:32%;margin-bottom: 15px;margin-right: 1%;
+    width:33%;margin-bottom: 15px;
+    /*margin-right: 1%;*/
     padding: 5px 5% 5px 5px;
   }
   .ch .xilie_mokuai {
     width:49%;margin-top: 1rem;
+    padding: 5px 1% 5px 5px;
   }
   .xilie_mokuai-topimg {
-    height: 200px;width: 200px;border: 1px solid #dfdfdf;
+    height: 200px;width: 100%;border: 1px solid #dfdfdf;
   }
   .ch .xilie_mokuai-topimg {
     border: 1px solid #dfdfdf;width: 100%;height: 8rem;
@@ -191,12 +196,19 @@
     width: 100%;height: 100%;
   }
   .xilie_mokuai-info {
-    width: 90%;
+    width: 100%;
     font-size: 12px;margin-top: 15px;
-    display: flex;flex-flow: row wrap;justify-content: space-between;align-items: flex-start;
+    display: flex;flex-flow: row nowrap;justify-content: space-between;align-items: flex-start;
   }
-  .xilie_mokuai-info>div {width: 50%;}
+  .ch .xilie_mokuai-info {
+    width: 99%;
+    font-size: 12px;margin-top: 15px;
+    display: flex;flex-flow: row nowrap;justify-content: space-between;align-items: flex-start;
+  }
+  .xilie_mokuai-info>div {width: 80%;}
+  .xilie_mokuai-info.xilie_mokuai-infoh5>div {width: 76%;}
   .xilie_mokuai-info p {line-height: 1.5;}
+  .xilie_mokuai-info>div p {overflow: hidden;white-space: nowrap;text-overflow:ellipsis;}
   .xilie_mokuai-info>p {
     color:#F93C5F;
   }

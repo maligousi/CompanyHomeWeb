@@ -99,9 +99,9 @@
       getShuff:function () {
         var that=this;
         frontendGet.get('/api/index/broadcast/list').then(function (response) {
-          console.log(2,response.data.data);
+          console.log('shuffling:',response.data.data);
           var picOri=response.data.data;
-          var cunz=[];
+          var cunz=[],cunzTwo=[];
           for(let i=0;i<picOri.length;i++){
             cunz.push({
               html:'<a class="sliderTu" target="view_window" href="'+picOri[i].referUrl+
@@ -110,9 +110,16 @@
 //                'background':'url("'+picOri[i].picUrl+'") no-repeat 100%'
               }
             })
+            cunzTwo.push({
+              html:'<a class="sliderTu" target="view_window" href="'+picOri[i].referUrl+
+              '"><img src="'+picOri[i].h5PicUrl+'"/></a>',
+              style:{
+//                'background':'url("'+picOri[i].picUrl+'") no-repeat 100%'
+              }
+            })
           }
           that.pages=cunz;
-          that.pagesTwo=cunz;
+          that.pagesTwo=cunzTwo;
         }).catch(function (data) {
           console.log(data);
         })

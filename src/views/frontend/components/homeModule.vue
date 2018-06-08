@@ -41,15 +41,15 @@
     <div class="diantang_cont" :class="{ph:Moden}">
       <div>
         <a :href="hallData.indexModelTypeOne[0].h5ReferUrlOne" target="view_window">
-          <img :src="hallData.indexModelTypeOne[0].imageOne"/>
+          <img :src="Moden?hallData.indexModelTypeOne[0].h5ImageOne:hallData.indexModelTypeOne[0].imageOne"/>
         </a>
         <a :href="hallData.indexModelTypeOne[1].h5ReferUrlOne" target="view_window">
-          <img :src="hallData.indexModelTypeOne[1].imageOne"/>
+          <img :src="Moden?hallData.indexModelTypeOne[1].h5ImageOne:hallData.indexModelTypeOne[1].imageOne"/>
         </a>
       </div>
       <div>
         <a :href="hallData.indexModelTypeOne[2].h5ReferUrlOne" target="view_window">
-          <img :src="hallData.indexModelTypeOne[2].imageOne"/>
+          <img :src="Moden?hallData.indexModelTypeOne[2].h5ImageOne:hallData.indexModelTypeOne[2].imageOne"/>
         </a>
       </div>
     </div>
@@ -110,7 +110,7 @@
     </div>
     <div class="chanpin_conth5" v-show="Moden">
       <div class="mid_lunboh5">
-        <slider ref="slider" :pages="pages" :sliderinit="sliderinit"></slider>
+        <slider ref="slider" :pages="pagesTwo" :sliderinit="sliderinitTwo"></slider>
       </div>
       <div class="chanpin_side_lefth5 chanpin_sideh5">
         <img :src="productData.indexModelTypeThree.typeModelLabelImageOne"/>
@@ -118,7 +118,7 @@
           <div class="paihangh5">
             <p>NO.<span>1</span></p>
             <div class="jieh5">
-              <img :src="productData.indexModelTypeThree.prodImageUrlOne"/>
+              <img :src="productData.indexModelTypeThree.h5TypeModelLabelImageOne"/>
               <div>
                 <p>{{productData.indexModelTypeThree.prodDescOne}}</p>
                 <a :href="productData.indexModelTypeThree.typeModelLabelImageOneReferUrl" target="view_window">点击查看</a>
@@ -128,7 +128,7 @@
           <div class="paihangh5">
             <p>NO.<span>2</span></p>
             <div class="jieh5">
-              <img :src="productData.indexModelTypeThree.prodImageUrlTwo" />
+              <img :src="productData.indexModelTypeThree.h5TypeModelLabelImageTwo" />
               <div>
                 <p>{{productData.indexModelTypeThree.prodDescTwo}}</p>
                 <a :href="productData.indexModelTypeThree.typeModelLabelImageTwoReferUrl" target="view_window">点击查看</a>
@@ -141,7 +141,7 @@
         <div class="dejiangh5">
           <img :src="productData.indexModelTypeThree.typeModelLabelImageThree"/>
           <div class="jieh5">
-            <img :src="productData.indexModelTypeThree.prodImageUrlThree"/>
+            <img :src="productData.indexModelTypeThree.h5TypeModelLabelImageThree"/>
             <div>
               <p>{{productData.indexModelTypeThree.prodDescThree}}</p>
               <a :href="productData.indexModelTypeThree.typeModelLabelImageThreeReferUrl" target="view_window">点击查看</a>
@@ -151,7 +151,7 @@
         <div class="gifsh5">
           <img :src="productData.indexModelTypeThree.typeModelLabelImageFour"/>
           <div>
-            <img class="gifs_imgh5" :src="productData.indexModelTypeThree.prodImageUrlFour"/>
+            <img class="gifs_imgh5" :src="productData.indexModelTypeThree.h5TypeModelLabelImageFour"/>
             <a :href="productData.indexModelTypeThree.typeModelLabelImageFourReferUrl" target="view_window">点击查看</a>
           </div>
         </div>
@@ -176,7 +176,35 @@
           loop: true,
           autoplay:3000
         },
+        sliderinitTwo: {
+          currentPage: 0,
+          tracking: false,
+          thresholdDistance: 100,
+          thresholdTime: 300,
+          loop: true,
+          autoplay:3000
+        },
         pages:[
+          {
+            html: '<div class="slider1">slider1</div>',
+            style: {
+              'background': '#1bbc9b'
+            }
+          },
+          {
+            html: '<div class="slider2">slider2</div>',
+            style: {
+              'background': '#4bbfc3'
+            }
+          },
+          {
+            html: '<div class="slider3">slider3</div>',
+            style: {
+              'background': '#7baabe'
+            }
+          }
+        ],
+        pagesTwo:[
           {
             html: '<div class="slider1">slider1</div>',
             style: {
@@ -249,6 +277,29 @@
               }
             }
           ];
+          that.pagesTwo=[
+            {
+              html:'<div class="sliderTu"><img src="'+
+              that.productData.indexModelTypeThree.h5TypeModelBroadcastImageOne+'"/></div>',
+              style:{
+//                'background':'url("'+that.productData.indexModelTypeThree.typeModelBroadcastImageOne+'") no-repeat 100% 100%'
+              }
+            },
+            {
+              html:'<div class="sliderTu"><img src="'+
+              that.productData.indexModelTypeThree.h5TypeModelBroadcastImageTwo+'"/></div>',
+              style:{
+//                'background':'url("'+that.productData.indexModelTypeThree.typeModelBroadcastImageTwo+'") no-repeat 100% 100%'
+              }
+            },
+            {
+              html:'<div class="sliderTu"><img src="'+
+              that.productData.indexModelTypeThree.h5TypeModelBroadcastImageThree+'"/></div>',
+              style:{
+//                'background':'url("'+that.productData.indexModelTypeThree.typeModelBroadcastImageThree+'") no-repeat 100% 100%'
+              }
+            }
+          ];
         }).catch(function (data) {
           console.log(data);
         })
@@ -313,7 +364,7 @@
     position: absolute;width: 50%;left: 25%;top: -30px;
   }
   .chanpin_side_lefth5>img {
-    position: absolute;width: 30%;left: 35%;top: -1.5rem;
+    position: absolute;width: 30%;left: 35%;top: -1.2rem;
   }
   .phoneMo {
     display: flex;flex-flow: row nowrap;justify-content: space-between;align-items: flex-start;
@@ -366,7 +417,7 @@
     position: absolute;width: 50%;left: 25%;top: -30px;
   }
   .dejiangh5>img {
-    position: absolute;width: 50%;left: 25%;top: -1.2rem;
+    position: absolute;width: 50%;left: 25%;top: -1.1rem;
   }
   .gifs>img {
     position: absolute;width: 50%;left: 25%;top: -24px;

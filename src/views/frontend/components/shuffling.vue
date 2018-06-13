@@ -104,15 +104,15 @@
           var cunz=[],cunzTwo=[];
           for(let i=0;i<picOri.length;i++){
             cunz.push({
-              html:'<a class="sliderTu" target="view_window" href="'+picOri[i].referUrl+
+              html:'<a class="sliderTu" href="'+picOri[i].referUrl+
               '"><img src="'+picOri[i].picUrl+'"/></a>',
               style:{
 //                'background':'url("'+picOri[i].picUrl+'") no-repeat 100%'
               }
             })
             cunzTwo.push({
-              html:'<a class="sliderTu" target="view_window" href="'+picOri[i].referUrl+
-              '"><img src="'+picOri[i].h5PicUrl+'"/></a>',
+              html:'<a class="sliderTu" href="'+picOri[i].referUrl+
+              '"><img onclick="window.location.href('+picOri[i].referUrl+')" src="'+picOri[i].h5PicUrl+'"/></a>',
               style:{
 //                'background':'url("'+picOri[i].picUrl+'") no-repeat 100%'
               }

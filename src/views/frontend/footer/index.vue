@@ -13,7 +13,7 @@
         <p>官方公众号</p>
         <span>关注公众号了解最新产品</span>
       </a>
-      <a :href="Toweibo" target="view_window">
+      <a :href="Toweibo">
         <img :src="pic.four"/>
         <p>官方微博</p>
         <span>关注微博账号了解最近活动</span>
@@ -41,7 +41,7 @@
           <p>官方公众号</p>
           <span>关注公众号了解最新产品</span>
         </a>
-        <a :href="Toweibo" target="view_window">
+        <a :href="Toweibo">
           <img :src="pic.four"/>
           <p>官方微博</p>
           <span>关注微博账号了解最近活动</span>

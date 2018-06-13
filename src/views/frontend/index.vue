@@ -67,7 +67,7 @@ export default {
   li {list-style: none;}
   img {border-style: none;}
   html {-webkit-text-size-adjust: 100%;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
-  body {font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  body {font-family:"Microsoft Yahei", "微软雅黑","Helvetica Neue", Helvetica, Arial, sans-serif;
     -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased;text-rendering: optimizeLegibility;}
 
   /*公用css*/

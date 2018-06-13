@@ -11,7 +11,7 @@
       <div class="duilian">
         <img :src="Moden?aboutData.indexModelTypeTwo.h5ImageUrlOne:aboutData.indexModelTypeTwo.imageUrlOne" />
         <p>{{aboutData.indexModelTypeTwo.typeHeaderOne}}</p>
-        <a :href="aboutData.indexModelTypeTwo.referUrlOne" target="view_window">
+        <a :href="aboutData.indexModelTypeTwo.referUrlOne">
           {{aboutData.indexModelTypeTwo.typeHeaderDescOne}}
         </a>
       </div>
@@ -25,7 +25,7 @@
       <div class="duilian">
         <img :src="Moden?aboutData.indexModelTypeTwo.h5ImageUrlTwo:aboutData.indexModelTypeTwo.imageUrlTwo" />
         <p>{{aboutData.indexModelTypeTwo.typeHeaderTwo}}</p>
-        <a :href="aboutData.indexModelTypeTwo.referUrlOne" target="view_window">
+        <a :href="aboutData.indexModelTypeTwo.referUrlOne">
           {{aboutData.indexModelTypeTwo.typeHeaderDescTwo}}
         </a>
       </div>
@@ -40,15 +40,15 @@
     </div>
     <div class="diantang_cont" :class="{ph:Moden}">
       <div>
-        <a :href="hallData.indexModelTypeOne[0].h5ReferUrlOne" target="view_window">
+        <a :href="hallData.indexModelTypeOne[0].h5ReferUrlOne">
           <img :src="Moden?hallData.indexModelTypeOne[0].h5ImageOne:hallData.indexModelTypeOne[0].imageOne"/>
         </a>
-        <a :href="hallData.indexModelTypeOne[1].h5ReferUrlOne" target="view_window">
+        <a :href="hallData.indexModelTypeOne[1].h5ReferUrlOne">
           <img :src="Moden?hallData.indexModelTypeOne[1].h5ImageOne:hallData.indexModelTypeOne[1].imageOne"/>
         </a>
       </div>
       <div>
-        <a :href="hallData.indexModelTypeOne[2].h5ReferUrlOne" target="view_window">
+        <a :href="hallData.indexModelTypeOne[2].h5ReferUrlOne">
           <img :src="Moden?hallData.indexModelTypeOne[2].h5ImageOne:hallData.indexModelTypeOne[2].imageOne"/>
         </a>
       </div>
@@ -70,7 +70,7 @@
             <img :src="productData.indexModelTypeThree.prodImageUrlOne"/>
             <div>
               <p>{{productData.indexModelTypeThree.prodDescOne}}</p>
-              <a :href="productData.indexModelTypeThree.typeModelLabelImageOneReferUrl" target="view_window">点击详情></a>
+              <a :href="productData.indexModelTypeThree.typeModelLabelImageOneReferUrl">点击详情></a>
             </div>
           </div>
         </div>
@@ -80,7 +80,7 @@
             <img :src="productData.indexModelTypeThree.prodImageUrlTwo" />
             <div>
               <p>{{productData.indexModelTypeThree.prodDescTwo}}</p>
-              <a :href="productData.indexModelTypeThree.typeModelLabelImageTwoReferUrl" target="view_window">点击详情></a>
+              <a :href="productData.indexModelTypeThree.typeModelLabelImageTwoReferUrl">点击详情></a>
             </div>
           </div>
         </div>
@@ -95,7 +95,7 @@
             <img :src="productData.indexModelTypeThree.prodImageUrlThree"/>
             <div>
               <p>{{productData.indexModelTypeThree.prodDescThree}}</p>
-              <a :href="productData.indexModelTypeThree.typeModelLabelImageThreeReferUrl" target="view_window">点击详情></a>
+              <a :href="productData.indexModelTypeThree.typeModelLabelImageThreeReferUrl">点击详情></a>
             </div>
           </div>
         </div>
@@ -103,7 +103,7 @@
           <img :src="productData.indexModelTypeThree.typeModelLabelImageFour"/>
           <div>
             <img class="gifs_img" :src="productData.indexModelTypeThree.prodImageUrlFour"/>
-            <a :href="productData.indexModelTypeThree.typeModelLabelImageFourReferUrl" target="view_window">点击详情></a>
+            <a :href="productData.indexModelTypeThree.typeModelLabelImageFourReferUrl">点击详情></a>
           </div>
         </div>
       </div>
@@ -121,7 +121,7 @@
               <img :src="productData.indexModelTypeThree.h5TypeModelLabelImageOne"/>
               <div>
                 <p>{{productData.indexModelTypeThree.prodDescOne}}</p>
-                <a :href="productData.indexModelTypeThree.typeModelLabelImageOneReferUrl" target="view_window">点击查看</a>
+                <a :href="productData.indexModelTypeThree.typeModelLabelImageOneReferUrl">点击查看</a>
               </div>
             </div>
           </div>
@@ -131,7 +131,7 @@
               <img :src="productData.indexModelTypeThree.h5TypeModelLabelImageTwo" />
               <div>
                 <p>{{productData.indexModelTypeThree.prodDescTwo}}</p>
-                <a :href="productData.indexModelTypeThree.typeModelLabelImageTwoReferUrl" target="view_window">点击查看</a>
+                <a :href="productData.indexModelTypeThree.typeModelLabelImageTwoReferUrl">点击查看</a>
               </div>
             </div>
           </div>
@@ -144,7 +144,7 @@
             <img :src="productData.indexModelTypeThree.h5TypeModelLabelImageThree"/>
             <div>
               <p>{{productData.indexModelTypeThree.prodDescThree}}</p>
-              <a :href="productData.indexModelTypeThree.typeModelLabelImageThreeReferUrl" target="view_window">点击查看</a>
+              <a :href="productData.indexModelTypeThree.typeModelLabelImageThreeReferUrl">点击查看</a>
             </div>
           </div>
         </div>
@@ -152,7 +152,7 @@
           <img :src="productData.indexModelTypeThree.typeModelLabelImageFour"/>
           <div>
             <img class="gifs_imgh5" :src="productData.indexModelTypeThree.h5TypeModelLabelImageFour"/>
-            <a :href="productData.indexModelTypeThree.typeModelLabelImageFourReferUrl" target="view_window">点击查看</a>
+            <a :href="productData.indexModelTypeThree.typeModelLabelImageFourReferUrl">点击查看</a>
           </div>
         </div>
       </div>
@@ -396,7 +396,7 @@
     font-size: .6rem;text-align: center;margin-top: 1.2rem;
     background-color: #EC7291;border-color: #ccc;
     color: #fff;padding: .5rem 0;
-    width: 5rem;border-radius: 4px;
+    width: 4rem;border-radius: 4px;
   }
   .chanpin_sidd_right>div {
     position: relative;
@@ -436,7 +436,7 @@
     font-size: .6rem;text-align: center;
     background-color: #EC7291;border-color: #ccc;
     color: #fff;padding: .5rem 0;
-    width: 5rem;border-radius: 4px;
+    width: 4rem;border-radius: 4px;
   }
   .gifs_img {
     display: block;width: 76%;margin: 0 auto;height: 150px;

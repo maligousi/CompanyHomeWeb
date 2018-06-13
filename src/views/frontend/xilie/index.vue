@@ -45,7 +45,8 @@
             </div>
             <p>{{item.prodPrice}}<span>元</span></p>
           </div>
-          <a :href="item.referUrl">+查看详情</a>
+          <a href="javascript:;" @click="toDetails(item.id)">+查看详情</a>
+          <!--<a :href="item.referUrl">+查看详情</a>-->
         </div>
         <!--<div class="xilie_mokuai">-->
           <!--<div class="xilie_mokuai-topimg">-->
@@ -138,6 +139,9 @@
       },
       seleChange:function () {
         this.changeIds(this.value)
+      },
+      toDetails:function (id) {
+        this.$router.push({path:`/productDetail/${id}`});
       }
     }
   }

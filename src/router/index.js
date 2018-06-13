@@ -57,6 +57,11 @@ export const constantRouterMap = [
         path: 'newMore',
         name: 'newMore',
         component: () => import('@/views/frontend/about/newMore')
+      },
+      {
+        path: 'productDetail/:name',
+        name: 'productDetail',
+        component: () => import('@/views/frontend/about/details')
       }
     ]
   },

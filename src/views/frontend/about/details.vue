@@ -40,7 +40,7 @@
     </div>
     <div class="detail-webH5 hidden-sm-and-up">
       <div class="detial-toph5" @click="showBigPich5">
-        <img :src="detailData.prodPic" />
+        <img :src="detailData.prodH5Pic" />
         <p>点击查看大图</p>
       </div>
       <div class="detailName">{{detailData.prodName}}</div>
@@ -68,13 +68,13 @@
         </div>
         <div class="h5recom">
           <div class="h5recom_kuai" v-for="item in detailData.recommendeds" @click="otherDetails(item.referUrl)">
-            <img :src="item.recommendedProdUrl"/>
+            <img :src="item.recommendedProdH5Url"/>
             <p>{{item.recommendedProdName}}</p>
           </div>
         </div>
       </div>
       <div class="showh5_bigpic" v-show="showBigh5" @click="closeBigpich5">
-        <img :src="detailData.prodPic"/>
+        <img :src="detailData.prodH5Pic"/>
       </div>
     </div>
   </div>

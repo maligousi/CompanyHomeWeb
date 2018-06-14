@@ -6,7 +6,7 @@
       <p @click="slideNext" class="rightLun"></p>
     </div>
     <div class="hidden-sm-and-up" style="width:100%;height: 150px;position: relative;">
-      <slider ref="sliderTwo" :pages="pagesTwo" :sliderinit="sliderinitTwo"></slider>
+      <slider ref="sliderTwo" :pages="pagesTwo" @tap="onTap" :sliderinit="sliderinitTwo"></slider>
     </div>
   </div>
 </template>
@@ -77,7 +77,8 @@
               'background': '#7baabe'
             }
           }
-        ]
+        ],
+        shuffData:[]
       }
     },
     computed:{
@@ -96,11 +97,16 @@
       slidePre () {
         this.$refs.slider.$emit('slidePre')
       },
+      onTap (data) {
+        console.log(this.shuffData[data.currentPage].referUrl)
+        window.location.href = this.shuffData[data.currentPage].referUrl
+      },
       getShuff:function () {
         var that=this;
         frontendGet.get('/api/index/broadcast/list').then(function (response) {
           console.log('shuffling:',response.data.data);
           var picOri=response.data.data;
+          that.shuffData=response.data.data;
           var cunz=[],cunzTwo=[];
           for(let i=0;i<picOri.length;i++){
             cunz.push({
@@ -111,10 +117,9 @@
               }
             })
             cunzTwo.push({
-              html:'<a class="sliderTu" href="'+picOri[i].referUrl+
-              '"><img onclick="window.location.href('+picOri[i].referUrl+')" src="'+picOri[i].h5PicUrl+'"/></a>',
+              html:'<a class="sliderTu" href="'+picOri[i].referUrl+'"></a>',
               style:{
-//                'background':'url("'+picOri[i].picUrl+'") no-repeat 100%'
+                'background':'url("'+picOri[i].h5PicUrl+'") no-repeat 100%'
               }
             })
           }

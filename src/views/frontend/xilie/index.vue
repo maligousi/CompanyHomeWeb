@@ -134,7 +134,12 @@
         x=x?x:this.$route.params.thisOne;
         this.getProduct(x);
         this.xid=x;
-        this.value=x;
+        var mx=this.xilies;
+        for(let i=0;i<mx.length;i++){
+          if(mx[i].id==x){
+            this.value=mx[i].categoryName
+          }
+        }
         this.changeIm(x);
       },
       seleChange:function () {
